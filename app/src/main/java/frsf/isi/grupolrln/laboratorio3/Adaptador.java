@@ -94,7 +94,7 @@ public class Adaptador extends BaseAdapter{
 
         holder.fecha.setText("Fecha Fin: "+ fecha.format(trabajo.getFechaEntrega()));
         holder.hora_precio.setText("Hora: "+trabajo.getHorasPresupuestadas()+ "Max $/Hora: "+trabajo.getPrecioMaximoHora());
-        
+
 
         switch (trabajo.getMonedaPago()) {    //1 US$ 2Euro 3 AR$- 4 Libra 5 R$
 

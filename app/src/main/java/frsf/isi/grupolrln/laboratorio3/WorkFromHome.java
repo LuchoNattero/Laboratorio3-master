@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -43,8 +44,9 @@ public class WorkFromHome extends AppCompatActivity {
         lv_lista_trabajo = (ListView)findViewById(R.id.lv_primera_lista);
         List<Trabajo> listaTrabajos = new LinkedList<>(Arrays.asList(Trabajo.TRABAJOS_MOCK));
         adap = new Adaptador(this, listaTrabajos);
-        registerForContextMenu(lv_lista_trabajo);
         lv_lista_trabajo.setAdapter(adap);
+        registerForContextMenu(lv_lista_trabajo);
+
 
 
 
@@ -62,7 +64,6 @@ public class WorkFromHome extends AppCompatActivity {
 
 
         MenuInflater inflater = getMenuInflater();
-       // menu.setHeaderTitle();
         inflater.inflate(R.menu.menu_main, menu);
     }
 
